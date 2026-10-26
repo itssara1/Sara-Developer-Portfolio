@@ -97,3 +97,56 @@ html[lang=en] h1{font-size:clamp(48px,10vw,145px)}
   .actions .button { width: 100%; }
   .actions .text-link { align-self: start; }
 }
+
+/* iPhone typography and compact mobile spacing. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+@media (max-width: 700px) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  html[dir=rtl] h1, html[dir=rtl] h2, html[dir=rtl] h3,
+  html[dir=rtl] .label, html[dir=rtl] .project-info .label { letter-spacing: normal; }
+  header { padding-top: 8px; padding-bottom: 4px; row-gap: 2px; }
+  header .logo { font-family: Arial, sans-serif; font-size: 29px; }
+  header nav { font-size: 12px; gap: 4px; }
+  header nav a, header nav a:nth-child(1), header nav a:nth-child(3) { min-height: 40px; }
+  #language { min-height: 40px; min-width: 64px; padding: 5px 12px; font-size: 13px; }
+  #language span { display: none; }
+  html { scroll-padding-top: 106px; }
+  .hero { padding-top: 28px; }
+  .hero-note { margin-top: 20px; }
+  .hero-note p { line-height: 1.7; }
+  .hero-note .scroll { font-family: Arial, sans-serif; font-size: 27px; }
+  .tech-strip { padding: 16px 20px; gap: 8px; }
+  .tech-strip i { display: none; }
+  .tech-strip > span {
+    padding: 5px 11px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #f8f9f4;
+    font: 12px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    white-space: nowrap;
+  }
+  .section { padding-block: 40px; }
+  .section-top { margin-bottom: 19px; }
+  .label { font-size: 11px; line-height: 1.75; }
+  h2 { font-size: clamp(26px,7.2vw,38px); line-height: 1.5; }
+  .about-grid { gap: 20px; }
+  .lead { font-size: 16px; line-height: 1.9; margin-bottom: 15px; }
+  .about-grid .muted, .project-info p, .contact p { font-size: 14px; line-height: 1.9; }
+  .expertise { margin-top: 23px; }
+  .expertise article { padding: 21px; }
+  .expertise h3 { font-size: 21px; }
+  .expertise p { font-size: 14px; line-height: 1.85; }
+  .work-title p { font-size: 14px; line-height: 1.85; }
+  .project { margin-bottom: 38px; }
+  .project-info h3 { font-size: clamp(29px,8vw,38px); }
+  .project-info .text-link { font-size: 13px; }
+  summary b { font-size: 17px; }
+  summary small { font-size: 12px; }
+  details p { font-size: 14px; line-height: 1.85; }
+  .contact { padding-block: 40px; }
+  .contact h2 { margin-block: 18px; }
+}
